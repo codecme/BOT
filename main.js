@@ -21,7 +21,6 @@ const {
 	generateWAMessageFromContent,
 	generateMessageID,
 	downloadContentFromMessage,
-	makeInMemoryStore,
 	getContentType,
 	jidDecode,
     MessageRetryMap,
@@ -40,7 +39,7 @@ const FileType = require('file-type');
 const ConfigBaileys = require("./Control/Config.js");
 const infoRiifinity = require('./node_modules/riifinity/InfoRiifinity.js');
 const { showBanner } = require('./node_modules/riifinity/tampilan.js');
-const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
+const store = null // makeInMemoryStore not available
 
 
 async function InputNumber(promptText) {
